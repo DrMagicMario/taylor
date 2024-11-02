@@ -1,16 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main (int argc, char** argv){
-  printf("test\n");
-  return 0;
-}
-
-struct LinkedList{
+typedef struct LinkedList{
     void *head;
-};
+}LinkedList_t;
 
-struct Node {
+typedef struct{
     int data;
     struct Node *next;
-};
+}Node_t;
+
+void createNode(int value){
+    Node_t newNode;
+    newNode.data = value;
+    newNode.next = NULL;
+}
+
+int main (int argc, char** argv){
+  printf("test\n");
+  LinkedList_t linklist;
+  return 0;
+}}
